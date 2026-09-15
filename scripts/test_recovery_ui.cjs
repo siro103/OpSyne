@@ -33,14 +33,14 @@ const { randomUUID } = require('node:crypto');
     const login = async actor => {
       const page = await browser.newPage({ viewport: { width: 1280, height: 960 } });
       page.on('pageerror', error => errors.push(error.message));
-      await page.goto(base);
+      await page.goto(`${base}/#services/demo-checkout/incidents`);
       await page.getByLabel('アクセストークン', { exact: true }).fill(token(actor));
       await page.getByRole('button', { name: 'ワークスペースに接続' }).click();
       await expect(page.locator('#auth-dialog')).not.toBeVisible();
       return page;
     };
     const openIncident = async page => {
-      await page.locator('a[data-view="cases"]').click();
+      await page.locator('a[data-view="incidents"]').click();
       await page.getByRole('button', { name: 'サンプル: 注文処理を復旧してください', exact: true }).click();
     };
     const prepare = async (actor = 'owner', proposer = 'operator') => {
