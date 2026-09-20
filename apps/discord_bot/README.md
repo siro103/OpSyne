@@ -155,3 +155,9 @@ python dev.py run --locked opsyne-discord reconcile <event_id> <確認済みmess
 - [応答期限と応答形式](https://docs.discord.com/developers/interactions/receiving-and-responding)
 - [レート制限](https://docs.discord.com/developers/topics/rate-limits)
 - [メッセージとEmbed制限](https://docs.discord.com/developers/resources/message)
+
+## ライセンス
+
+OpSyne Discord Botは[MIT License](LICENSE)で公開しています。
+著作権表示と許諾文を保持することで、改変・再配布・商用利用ができます。無保証などの条件はライセンス本文を参照してください。
+依存ライブラリには、それぞれのライセンスが適用されます。
